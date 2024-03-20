@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドロップダウン選択肢表示</title>
+</head>
+<body>
+
+<select id="dropdown">
+  <option value="option1">ラム</option>
+  <option value="option2">ホゲット</option>
+  <option value="option3">マトン</option>
+</select>
+
+<p id="outputParagraph">選択されたテキストが表示されます。</p>
+
+<script>
+var dropdown = document.getElementById("dropdown");
+var outputParagraph = document.getElementById("outputParagraph");
+
+dropdown.addEventListener("change", function() {
+  outputParagraph.textContent = dropdown.options[dropdown.selectedIndex].text;
+});
+</script>
+
+</body>
+</html>
